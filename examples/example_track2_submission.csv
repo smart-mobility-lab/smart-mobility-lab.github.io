@@ -1,0 +1,2 @@
+ID,pred_final_answer,success,assumptions
+Q01,"Example final numeric/string answer",true,"Use provided benchmark snapshot."

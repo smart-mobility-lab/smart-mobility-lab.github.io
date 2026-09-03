@@ -1,0 +1,63 @@
+﻿ID,question
+Q01,How many red-light-running events occurred at each intersection?
+Q02,"Which intersections had the highest pedestrian activity during the evening peak, defined as 4–7 PM?"
+Q03,"What was the total vehicle volume by intersection during weekday morning peak, defined as weekdays 7–10 AM?"
+Q04,Which intersections had the highest number of pedestrian compliance violations?
+Q05,"What was the speed distribution at each intersection during evening peak, defined as 4–7 PM?"
+Q06,Which turning movements had the highest safety-event counts?
+Q07,Which intersections have the highest total safety-event counts?
+Q08,What are the most common safety-event types by intersection?
+Q09,"Which intersections had the highest average delay during the afternoon peak, defined as 3-6 PM?"
+Q10,What vehicle classes were most common at each intersection?
+Q11,Which intersections have the highest total vehicle volume?
+Q12,What is the daily trend in VRU activity?
+Q13,Which movements had the longest average simple delay?
+Q14,What are the red-light-running counts by street name?
+Q15,What were the total red-light-running counts by direction?
+Q16,Which phase movements had the highest red-light-running counts?
+Q17,What are the pedestrian compliance violations by direction?
+Q18,What was the average simple delay by street name and direction?
+Q19,What are the vehicle volumes by class?
+Q20,"What were the top vehicle movements by total volume during evening peak, defined as 4–7 PM?"
+Q21,"What was the VRU activity by class during weekday morning peak, defined as weekdays 7–10 AM?"
+Q22,What was the total crosswalk activity by crosswalk side?
+Q23,What were the most common safety-event object-class pairs?
+Q24,What are the red-light-running counts by vehicle classification?
+Q25,What are the yellow-light-running counts by direction?
+Q26,What are the pedestrian compliance violations by crosswalk approach?
+Q27,What is the average simple delay by direction?
+Q28,Which movements have the longest median simple delay?
+Q29,"What are the vehicle volumes by approach during evening peak, defined as 4-7 PM?"
+Q30,"What is the VRU activity by approach during evening peak, defined as 4-7 PM?"
+Q31,What is the total crosswalk activity by direction?
+Q32,Which detection areas have the highest safety-event counts?
+Q33,"What are the total vehicle volumes by movement during weekday morning peak, defined as weekdays 7-10 AM?"
+Q34,"Which intersections had the highest total VRU activity during weekday morning peak, defined as weekdays 7-10 AM?"
+Q35,What are the red-light-running counts by intersection and phase movement?
+Q36,Which intersections had the highest yellow-light-running counts?
+Q37,What are the pedestrian red-light compliance violations by direction?
+Q38,What are the pedestrian yellow-light compliance violations by direction?
+Q39,What are the total safety-event counts by event type?
+Q40,What are the safety-event counts by first object class?
+Q41,What is the total crosswalk activity by road-user class?
+Q42,What is the total crosswalk activity by crosswalk side and direction?
+Q43,"Among intersections with safety data, which intersections show the highest combined safety burden using red-light-running, pedestrian compliance violations, average delay, and safety-event count?"
+Q44,How do red-light-running events compare with pedestrian compliance violations at each intersection?
+Q45,"Which intersections have high red-light-running events but relatively lower pedestrian compliance violations, or the opposite pattern?"
+Q46,Which intersections have both high average delay and high red-light-running events?
+Q47,"At the intersection covered by VRU and vehicle counts, what is the pedestrian-to-vehicle activity ratio?"
+Q48,"At the intersection covered by vehicle counts and speed distribution, what speed ranges dominate relative to total vehicle volume?"
+Q49,Which safety-event types are most common at intersections that also have high red-light-running or pedestrian compliance violations?
+Q50,Which intersections have the highest normalized safety score across available safety indicators?
+Q51,Are delay-heavy intersections also red-light-running-heavy intersections in the dataset?
+Q52,"Which intersections have the most unbalanced safety profile, meaning one safety indicator is much higher than the others?"
+Q53,"Which intersections combine high pedestrian activity during evening peak, defined as 4-7 PM, with high pedestrian compliance violations during March 2026?"
+Q54,"Which intersections combine high vehicle volume during evening peak, defined as 4-7 PM, with high red-light-running counts?"
+Q55,"Which intersections have the highest pedestrian-to-vehicle activity ratio during evening peak, defined as 4-7 PM, and how does that compare with pedestrian compliance violations?"
+Q56,Which movements combine high vehicle volume and high red-light-running counts?
+Q57,Which intersections have the highest safety-event rate relative to vehicle volume?
+Q58,"Which safety-event types are most common at intersections with the highest average delay during the afternoon peak, defined as 3-6 PM?"
+Q59,"Which intersections show high pedestrian activity but low vehicle activity during evening peak, defined as 4-7 PM?"
+Q60,Which intersections combine high yellow-light-running counts with high average delay?
+Q61,Which intersections have the largest mismatch between vehicle volume and speed-distribution counts?
+Q62,"Which intersections have the highest combined exposure score using vehicle volume, pedestrian activity, and average delay?"

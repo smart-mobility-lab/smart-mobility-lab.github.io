@@ -1,0 +1,2 @@
+ID,answerable,selected_tables,key_fields,granularity,query_logic,sql_or_plan,assumptions
+Q01,true,safety_redlightrunners,"intersection; movement; count",intersection-level,"Aggregate red-light-running counts by intersection.","SELECT ...","Use provided benchmark snapshot."

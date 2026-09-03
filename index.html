@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Mobility Benchmark</title>
+  <meta name="description" content="Smart Mobility Benchmark: a structured transportation data analytics benchmark for schema-aware planning and data-grounded answering." />
+  <link rel="stylesheet" href="./scss/benchmark.css?v=3" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="site-label">Transportation Data Analytics Benchmark</p>
+        <h1>Smart Mobility Benchmark</h1>
+        <p class="subtitle">
+          A benchmark for evaluating schema-aware planning and data-grounded answering over structured
+          smart mobility data.
+        </p>
+      </div>
+
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#materials">Materials</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#data">Data</a>
+        <a href="#questions">Questions</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#submission">Submission</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="overview" class="section">
+      <h2>Overview</h2>
+      <p>
+        The Smart Mobility Benchmark evaluates whether AI systems can answer transportation analytics
+        questions using structured CSV data and schema metadata. The benchmark focuses on two capabilities:
+        planning the correct analysis and producing a final answer grounded in the provided data.
+      </p>
+
+      <table class="summary-table" aria-label="Benchmark summary">
+        <tbody>
+          <tr><th scope="row">Data window</th><td>March 2026 Alexandria smart mobility snapshot</td></tr>
+          <tr><th scope="row">Question set</th><td>62 public questions with neutral IDs from Q01 to Q62</td></tr>
+          <tr><th scope="row">Tables</th><td>9 structured CSV tables covering volume, VRU activity, safety, compliance, delay, speed, conflicts, and crosswalk activity</td></tr>
+          <tr><th scope="row">Evaluation tracks</th><td>Track 1: planning and schema reasoning; Track 2: data-grounded answering</td></tr>
+          <tr><th scope="row">Evaluation materials</th><td>Public data/schema/questions; hidden reference answers and scoring scripts</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="materials" class="section">
+      <h2>Benchmark Materials</h2>
+      <p>
+        Public benchmark materials are organized into example submissions, released data tables,
+        schema descriptions, and public questions. Hidden reference answers and private scoring outputs
+        are not included in the public repository.
+      </p>
+
+      <div class="material-links" role="list">
+        <a role="listitem" class="material-card" href="https://github.com/raquibvt/sml-benchmark/tree/main/examples" target="_blank" rel="noopener">
+          <strong>Examples</strong>
+          <span>Example Track 1 and Track 2 submission files.</span>
+        </a>
+
+        <a role="listitem" class="material-card" href="https://github.com/raquibvt/sml-benchmark/tree/main/tables" target="_blank" rel="noopener">
+          <strong>Tables</strong>
+          <span>Released CSV data tables for the benchmark snapshot.</span>
+        </a>
+
+        <a role="listitem" class="material-card" href="https://github.com/raquibvt/sml-benchmark/tree/main/schema" target="_blank" rel="noopener">
+          <strong>Schema</strong>
+          <span>Column descriptions and table metadata for schema-aware reasoning.</span>
+        </a>
+
+        <a role="listitem" class="material-card" href="https://github.com/raquibvt/sml-benchmark/tree/main/questions" target="_blank" rel="noopener">
+          <strong>Questions</strong>
+          <span>Public benchmark questions with neutral IDs.</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="leaderboard" class="section">
+      <h2>Public Leaderboard</h2>
+      <p>
+        The leaderboard is generated from sanitized evaluation outputs. It does not expose submitted files,
+        private repository paths, evaluator logs, hidden reference answers, Google Drive identifiers, or tokens.
+      </p>
+
+      <div class="leaderboard-meta">
+        <span id="leaderboard-status">Loading leaderboard...</span>
+      </div>
+
+      <div class="leaderboard-wrap">
+        <table class="leaderboard-table" aria-label="Smart Mobility Benchmark public leaderboard">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team / System</th>
+              <th>Track</th>
+              <th class="num">Track 1</th>
+              <th class="num">Track 2</th>
+              <th class="num">Overall</th>
+              <th>Processed</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <tr><td colspan="7">Loading leaderboard...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="data" class="section">
+      <h2>Data Tables</h2>
+      <p>
+        The benchmark uses a fixed one-month data snapshot. The schema files describe the available
+        tables and columns so that systems can reason from metadata rather than relying on hard-coded
+        assumptions.
+      </p>
+      <div class="table-list" role="list">
+        <span role="listitem">safety_conflicts</span>
+        <span role="listitem">safety_event</span>
+        <span role="listitem">safety_pedcompliance</span>
+        <span role="listitem">safety_redlightrunners</span>
+        <span role="listitem">safety_simpledelay</span>
+        <span role="listitem">speed_distribution</span>
+        <span role="listitem">tmc_crosswalk</span>
+        <span role="listitem">vehicle_count</span>
+        <span role="listitem">vru_count</span>
+      </div>
+    </section>
+
+    <section id="questions" class="section">
+      <h2>Question Set</h2>
+      <p>
+        The benchmark includes both single-table and multi-table analytical questions. Public question
+        IDs do not reveal internal difficulty categories. Systems must infer the relevant tables, fields,
+        aggregation level, and analysis logic from the question and schema metadata.
+      </p>
+      <div class="two-column">
+        <article>
+          <h3>Single-table tasks</h3>
+          <ul>
+            <li>Filter by time window, movement, class, direction, or intersection.</li>
+            <li>Group and aggregate counts, violations, delay, or speed bins.</li>
+            <li>Rank intersections, movements, classes, or event types.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Multi-table tasks</h3>
+          <ul>
+            <li>Join or compare tables using normalized intersection labels.</li>
+            <li>Compute ratios, rates, and exposure-normalized measures.</li>
+            <li>Build normalized scores and combined safety or activity rankings.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="tracks" class="section">
+      <h2>Evaluation Tracks</h2>
+      <table class="summary-table">
+        <thead>
+          <tr><th>Track</th><th>Purpose</th><th>Expected output</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Track 1</td><td>Planning and schema reasoning</td><td>Answerability, selected tables, fields, granularity, query logic, and SQL-style plan</td></tr>
+          <tr><td>Track 2</td><td>Data-grounded answering</td><td>Final response computed from the released CSV files, with assumptions and limitations</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="submission" class="section">
+      <h2>Submission Workflow</h2>
+      <p>
+        Participants may submit Track 1, Track 2, or both. Track 1 and Track 2 outputs should be uploaded
+        as separate CSV/JSON files so that each file can be evaluated by the correct scoring script.
+      </p>
+      <p>
+        Repository-based submissions are used only to retrieve the specified CSV/JSON output. Participant
+        code will not be executed.
+      </p>
+
+      <div class="callout">
+        <h3>Required Track 1 output fields</h3>
+        <code>ID</code>, <code>answerable</code>, <code>selected_tables</code>,
+        <code>key_fields</code>, <code>granularity</code>, <code>query_logic</code>,
+        <code>sql_or_plan</code>, <code>assumptions</code>
+      </div>
+
+      <div class="callout">
+        <h3>Required Track 2 output fields</h3>
+        <code>ID</code>, <code>final_response</code> or <code>pred_final_answer</code>,
+        and any required execution/output columns defined in the released submission template.
+      </div>
+
+      <p class="actions">
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc0aTMlnkXJWz5U2oH69svjlxQkGmS7nbjNK_AcRDOI_P0SGg/viewform?usp=dialog" target="_blank" rel="noopener">View Submission Form</a>
+        <a class="button secondary" href="examples/example_track1_submission.csv">Track 1 Example</a>
+        <a class="button secondary" href="examples/example_track2_submission.csv">Track 2 Example</a>
+      </p>
+    </section>
+
+    <section id="release" class="section">
+      <h2>Repository Contents</h2>
+      <p>
+        The benchmark repository is organized around a public benchmark package, documentation, examples,
+        schema files, data tables, and questions. Hidden reference answers and scoring scripts are maintained
+        separately by the benchmark organizers.
+      </p>
+      <pre class="repo-tree"><code>public/
+  index.html
+  leaderboard/
+  examples/
+  questions/
+  schema/
+  tables/</code></pre>
+    </section>
+
+    <section id="citation" class="section">
+      <h2>Citation</h2>
+      <p>Citation details will be added after the benchmark report is finalized.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        For questions about the benchmark package, evaluation protocol, or release materials, please contact
+        the benchmark maintainers.
+      </p>
+      <p><a href="mailto:mnice@vtti.vt.edu">mnice@vtti.vt.edu</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Smart Mobility Benchmark · Virginia Tech Transportation Institute</p>
+    </div>
+  </footer>
+
+  <script src="leaderboard_loader.js"></script>
+</body>
+</html>
