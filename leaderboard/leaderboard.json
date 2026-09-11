@@ -20,5 +20,16 @@
     "submitted_at": "Thu Sep 10 2026 20:06:29 GMT-0500 (Central Daylight Time)",
     "processed_at": "2026-09-11T01:07:17.736430Z",
     "rank": 2
+  },
+  {
+    "display_name": "test5 - Unnamed system",
+    "system_name": "",
+    "track": "Track 1: Planning and Schema Reasoning, Track 2: Data-Grounded Final Answers",
+    "track1_score": 0.4235456490340472,
+    "track2_score": 0.00991311475409836,
+    "overall_score": 0.21672938189407276,
+    "submitted_at": "Thu Sep 10 2026 20:29:09 GMT-0500 (Central Daylight Time)",
+    "processed_at": "2026-09-11T01:29:51.114089Z",
+    "rank": 3
   }
 ]
